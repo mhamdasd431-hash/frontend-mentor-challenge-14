@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <title>Frontend Mentor | Weather app</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="./assets/images/logo.svg" alt="Weather Now Logo">
+    </div>
+    <button class="units-btn" type="button" aria-expanded="false" aria-label="Change temperature units">
+      <img src="./assets/images/icon-units.svg" alt="">
+      <span>Units</span>
+      <img src="./assets/images/icon-dropdown.svg" alt="">
+    </button>
+  </header>
+  <main class="main-content">
+    <h1>How's the sky looking today?</h1>
+    <form class="search-form" role="search">
+      <label for="search-input" class="visually-hidden">Search for a place</label>
+      <div class="search-wrapper">
+        <input type="search" id="search-input" placeholder="Search for a place..." autocomplete="off">
+      </div>
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+    <div class="weather-dashboard">
+      <div class="primary-weather-column">
+        <section class="current-weather-card" aria-labelledby="current-location">
+          <div class="weather-info">
+            <h2 id="current-location">Berlin, Germany</h2>
+            <p class="current-date">Tuesday, Aug 5, 2025</p>
+          </div>
+          <div class="temperature-display">
+            <img src="./assets/images/icon-sunny.webp" alt="Sunny weather icon">
+            <span class="temp-value">20°</span>
+          </div>
+        </section>
+        <section class="metrics-grid" aria-label="Weather metrics">
+          <article class="metric-card">
+            <h3>Feels Like</h3>
+            <p class="metric-value">18°</p>
+          </article>
+          <article class="metric-card">
+            <h3>Humidity</h3>
+            <p class="metric-value">46%</p>
+          </article>
+          <article class="metric-card">
+            <h3>Wind</h3>
+            <p class="metric-value">14 km/h</p>
+          </article>
+          <article class="metric-card">
+            <h3>Precipitation</h3>
+            <p class="metric-value">0 mm</p>
+          </article>
+        </section>
+        <section class="daily-forecast" aria-labelledby="daily-heading">
+          <h2 id="daily-heading">Daily forecast</h2>
+          <div class="daily-cards-container">
+            <article class="day-card">
+              <h3>Tue</h3>
+              <img src="./assets/images/icon-rain.webp" alt="">
+              <div class="day-temps">
+                <span class="max-temp">20°</span>
+                <span class="min-temp">14°</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <h3>Wed</h3>
+              <img src="./assets/images/icon-rain.webp" alt="">
+              <div class="day-temps">
+                <span class="max-temp">21°</span>
+                <span class="min-temp">15°</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <h3>Thu</h3>
+              <img src="./assets/images/icon-sunny.webp" alt="">
+              <div class="day-temps">
+                <span class="max-temp">24°</span>
+                <span class="min-temp">14°</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <h3>Fri</h3>
+              <img src="./assets/images/icon-partly-cloudy.webp" alt="">
+              <div class="day-temps">
+                <span class="max-temp">25°</span>
+                <span class="min-temp">13°</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <h3>Sat</h3>
+              <img src="./assets/images/icon-storm.webp" alt="">
+              <div class="day-temps">
+                <span class="max-temp">21°</span>
+                <span class="min-temp">15°</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <h3>Sun</h3>
+              <img src="./assets/images/icon-overcast.webp" alt="">
+              <div class="day-temps">
+                <span class="max-temp">25°</span>
+                <span class="min-temp">16°</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <h3>Mon</h3>
+              <img src="./assets/images/icon-fog.webp" alt="">
+              <div class="day-temps">
+                <span class="max-temp">24°</span>
+                <span class="min-temp">15°</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+      <aside class="hourly-forecast-sidebar" aria-labelledby="hourly-heading">
+        <div class="hourly-header">
+          <h2 id="hourly-heading">Hourly forecast</h2>
+          <button class="day-select-btn" type="button" aria-expanded="false" aria-label="Select day for hourly forecast">
+            <span>Tuesday</span>
+            <img src="./assets/images/icon-dropdown.svg" alt="">
+          </button>
+        </div>
+        <ul class="hourly-list">
+          <li>
+            <span class="hour-time"><img src="./assets/images/icon-overcast.webp" alt=""> 3 PM</span>
+            <span class="hour-temp">20°</span>
+          </li>
+          <li>
+            <span class="hour-time"><img src="./assets/images/icon-partly-cloudy.webp" alt=""> 4 PM</span>
+            <span class="hour-temp">20°</span>
+          </li>
+          <li>
+            <span class="hour-time"><img src="./assets/images/icon-sunny.webp" alt=""> 5 PM</span>
+            <span class="hour-temp">20°</span>
+          </li>
+          <li>
+            <span class="hour-time"><img src="./assets/images/icon-overcast.webp" alt=""> 6 PM</span>
+            <span class="hour-temp">19°</span>
+          </li>
+          <li>
+            <span class="hour-time"><img src="./assets/images/icon-rain.webp" alt=""> 7 PM</span>
+            <span class="hour-temp">18°</span>
+          </li>
+          <li>
+            <span class="hour-time"><img src="./assets/images/icon-fog.webp" alt=""> 8 PM</span>
+            <span class="hour-temp">18°</span>
+          </li>
+          <li>
+            <span class="hour-time"><img src="./assets/images/icon-overcast.webp" alt=""> 9 PM</span>
+            <span class="hour-temp">17°</span>
+          </li>
+          <li>
+            <span class="hour-time"><img src="./assets/images/icon-overcast.webp" alt=""> 10 PM</span>
+            <span class="hour-temp">17°</span>
+          </li>
+        </ul>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+    Coded by <a href="#">Mohamad</a>.
+  </footer>
+  
+  <script src="./index.js"></script>
+</body>
+</html>
